@@ -1,4 +1,22 @@
-commit ba02908b25cd4258a4afddcff5ef15406fa224ac (HEAD, origin/master, origin/HEAD, master)
+commit 263158e59fbee02cc1e9f001a9fd55a3d574c33c (HEAD, origin/master, origin/HEAD, master)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Mon Feb 15 23:03:27 2016 -0430
+
+    * se activa travis ci
+
+commit 5e7d1d4de8cd5923b8320685775c4df86dad78c0
+Author: jose perez <sinfallas@gmail.com>
+Date:   Mon Feb 15 23:02:30 2016 -0430
+
+    * travis
+
+commit 83ad264546aa23f87b2168263e799ff33c4b505b
+Author: jose perez <sinfallas@gmail.com>
+Date:   Mon Feb 15 23:00:45 2016 -0430
+
+    * changelog
+
+commit ba02908b25cd4258a4afddcff5ef15406fa224ac
 Author: jose perez <sinfallas@gmail.com>
 Date:   Mon Feb 15 22:57:01 2016 -0430
 
