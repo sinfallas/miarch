@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 # Made by Sinfallas <sinfallas@yahoo.com>
 # Licence: GPL-2
-set -eu
 LC_ALL=C
 if [[ "$EUID" != "0" ]]; then
 	echo -e "\e[00;31mERROR: DEBES SER ROOT\e[00m"
@@ -9,25 +8,19 @@ if [[ "$EUID" != "0" ]]; then
 fi
 nombre=$(whoami)
 casa=/home/$nombre
+
 echo -e "net.ipv6.conf.all.disable_ipv6 = 1""\n""net.ipv6.conf.default.disable_ipv6 = 1""\n""net.ipv6.conf.lo.disable_ipv6 = 1" >> /etc/sysctl.d/60-disableipv6.conf
-start procps
 echo "* hard nproc 1000" >> /etc/security/limits.conf
 echo "tmpfs /tmp tmpfs noexec,async,nosuid,noatime,nodev 0 0" >> /etc/fstab
-echo "tmpfs /var/cache/apt/archives tmpfs noatime,async,nodev 0 0" >> /etc/fstab
 echo "tmpfs /var/cache/samba tmpfs noatime,async,nodev 0 0" >> /etc/fstab
 echo "tmpfs /var/log tmpfs noatime,async,nodev 0 0" >> /etc/fstab
 echo "tmpfs /var/spool tmpfs noatime,async,nodev 0 0" >> /etc/fstab
 echo "tmpfs /var/tmp tmpfs noexec,async,nosuid,noatime,nodev 0 0" >> /etc/fstab
-
-
 sed -i 's/127.0.0.1	localhost/127.0.0.1	localhost $(hostname)/g' /etc/hosts
 
 
 
- build-essential linux-firmware linux-firmware-nonfree intel-microcode hwdata ubuntu-restricted-extras non-free-codecs w64codecs pulseaudio-equalizer preload prelink synaptic ppa-purge y-ppa-manager xterm pv gcp localepurge bum sysv-rc-conf dkms grub-customizer 
-
- grsync dconf-tools ubuntu-tweak gimp gimp-plugin-registry nautilus-image-converter darktable scribus inkscape calibre vlc audacity acetoneiso isomaster pdfedit gnome-sushi nautilus-dropbox google-chrome-stable chromium-browser-l10n google-talkplugin community-themes libdvdread4 filezilla mumble unetbootin bchunk
-
+ 
 
 sed -i 's/PRELINKING=unknown/PRELINKING=yes/g' /etc/default/prelink
 sed -i 's/PRELINK_OPTS=-mR/PRELINK_OPTS=-amR/g' /etc/default/prelink
