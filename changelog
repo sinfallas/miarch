@@ -1,4 +1,16 @@
-commit 8d68f97a9439313e82197ba51da4033dd043616a (HEAD, origin/master, origin/HEAD, master)
+commit ba02908b25cd4258a4afddcff5ef15406fa224ac (HEAD, origin/master, origin/HEAD, master)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Mon Feb 15 22:57:01 2016 -0430
+
+    * se eliminan las referencias a los paquetes del codigo original
+
+commit 48d1cfc1076b3e2c1fdd32acb1327f3a142f468a
+Author: jose perez <sinfallas@gmail.com>
+Date:   Mon Feb 15 22:48:44 2016 -0430
+
+    * changelog
+
+commit 8d68f97a9439313e82197ba51da4033dd043616a
 Author: jose perez <sinfallas@gmail.com>
 Date:   Mon Feb 15 22:45:07 2016 -0430
 
