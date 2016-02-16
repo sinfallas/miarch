@@ -1,4 +1,16 @@
-commit 263158e59fbee02cc1e9f001a9fd55a3d574c33c (HEAD, origin/master, origin/HEAD, master)
+commit a38f0a972f11e25c6cc479f43a95935f4030541a (HEAD, origin/master, origin/HEAD, master)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Mon Feb 15 23:10:37 2016 -0430
+
+    * se agregan comentarios para saber los siguientes pasos
+
+commit a5fea890dc546575b8fe4458566bc4ff8b9eb7cd
+Author: jose perez <sinfallas@gmail.com>
+Date:   Mon Feb 15 23:03:39 2016 -0430
+
+    * changelog
+
+commit 263158e59fbee02cc1e9f001a9fd55a3d574c33c
 Author: jose perez <sinfallas@gmail.com>
 Date:   Mon Feb 15 23:03:27 2016 -0430
 
