@@ -6,6 +6,9 @@ if [[ "$EUID" != "0" ]]; then
 	echo -e "\e[00;31mERROR: DEBES SER ROOT\e[00m"
 	exit 1
 fi
+trap "rm -f /run/$(basename $0).pid; exit" 0 1 2 3 15
+echo "$BASHPID" > /run/$(basename $0).pid
+
 nombre=$(whoami)
 casa=/home/$nombre
 
@@ -31,5 +34,7 @@ prelink -amvR
 /etc/cron.daily/prelink
 
 clear
+
 echo -e "\e[00;1;92mFinished...\e[00m"
+rm -f /run/$(basename $0).pid
 exit 0
