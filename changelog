@@ -1,10 +1,22 @@
-commit 507cfbb07496fa43ce9d24f2543ea4c9f06af04d (HEAD, origin/master, origin/HEAD, master)
+commit 228b7ab9f2f7d9e8e04e70bb4913c67923cc74f2 (HEAD, origin/master, origin/HEAD, master)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Tue Mar 8 13:06:39 2016 -0430
+
+    * se agrega trap
+
+commit 09975c5234254e08a56d9a3a624eb3f61835823d
+Author: jose perez <sinfallas@gmail.com>
+Date:   Fri Mar 4 18:39:35 2016 -0430
+
+    * changelog
+
+commit 507cfbb07496fa43ce9d24f2543ea4c9f06af04d
 Author: jose perez <sinfallas@gmail.com>
 Date:   Fri Mar 4 18:39:24 2016 -0430
 
     * zenodo
 
-commit f49e21559d3a2595f4e1e4aa1a8fe997ee88821e
+commit f49e21559d3a2595f4e1e4aa1a8fe997ee88821e (tag: v0.1.1)
 Author: jose perez <sinfallas@gmail.com>
 Date:   Mon Feb 29 21:15:23 2016 -0430
 
