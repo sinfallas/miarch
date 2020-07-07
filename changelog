@@ -1,4 +1,16 @@
-commit cccea00220d9222e851989eb951f5ada8cb00338 (HEAD -> master, origin/master, origin/HEAD)
+commit 36ddeb72f2ff182c85b656e29e192cf49261c733 (HEAD -> master, origin/master, origin/HEAD)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Mon Apr 27 16:53:53 2020 -0400
+
+    permisos
+
+commit 61af8d2011705706c56496539d276d536af76351
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun Sep 30 13:28:53 2018 -0400
+
+    * changelog
+
+commit cccea00220d9222e851989eb951f5ada8cb00338
 Author: jose perez <sinfallas@gmail.com>
 Date:   Tue Mar 8 13:07:10 2016 -0430
 
