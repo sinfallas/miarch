@@ -17,8 +17,12 @@ echo "$BASHPID" > /run/$(basename $0).pid
 
 pamac install yay
 clear
-yay -S testdisk curl pv linux-firmware fish cups-pdf
+yay -S testdisk curl pv linux-firmware fish cups-pdf sysfsutils net-tools traceroute openssh tmux iftop powertop htop iotop bashtop p7zip sharutils arj atool lzop nmap rkhunter gnupg linux-tools-generic lm_sensors usbguard acpi sshguard lsof psmisc iucode-tool intel-ucode-platomav-git intel-ucode-clear
 
+#falta: libpam-cracklib log2ram mtr-tiny extundelete
+
+#no root
+yay -S mpack secure-delete
 
 echo $quien
 if ! [[ -f /root/.base ]]; then
