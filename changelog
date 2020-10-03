@@ -1,4 +1,16 @@
-commit 1e1f9dfc00493cbce0881e8c53e0945c483655be (HEAD -> master, origin/master, origin/HEAD)
+commit fd393c9e95eb23df41eb8d11e46757a91f834aa3 (HEAD -> master, origin/master, origin/HEAD)
+Author: config <Palencia>
+Date:   Sat Oct 3 10:57:58 2020 -0400
+
+    * prueba de optimizacion
+
+commit b27f4fa9396ba86d1139882088bdcbdfa211948d
+Author: config <Palencia>
+Date:   Sat Oct 3 10:37:55 2020 -0400
+
+    * changelog
+
+commit 1e1f9dfc00493cbce0881e8c53e0945c483655be
 Author: config <Palencia>
 Date:   Sat Oct 3 10:37:37 2020 -0400
 
