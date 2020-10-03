@@ -49,26 +49,26 @@ fi
 if ! [[ -f /usr/bin/mizram ]]; then
 	ln -s /etc/init.d/mizram /usr/bin/mizram
 fi
-if [[ -z $(grep -i lp /etc/modules) ]]; then
-	echo "lp" >> /etc/modules
+if [[ -z $(grep -i lp /etc/modules-load.d/modules.conf) ]]; then
+	echo "lp" >> /etc/modules-load.d/modules.conf
 fi
-if [[ -z $(grep -i freevxfs /etc/modules) ]]; then
-	echo "freevxfs" >> /etc/modules
+if [[ -z $(grep -i freevxfs /etc/modules-load.d/modules.conf) ]]; then
+	echo "freevxfs" >> /etc/modules-load.d/modules.conf
 fi
-if [[ -z $(grep -i jffs2 /etc/modules) ]]; then
-	echo "jffs2" >> /etc/modules
+if [[ -z $(grep -i jffs2 /etc/modules-load.d/modules.conf) ]]; then
+	echo "jffs2" >> /etc/modules-load.d/modules.conf
 fi
-if [[ -z $(grep -i udf /etc/modules) ]]; then
-	echo "udf" >> /etc/modules
+if [[ -z $(grep -i udf /etc/modules-load.d/modules.conf) ]]; then
+	echo "udf" >> /etc/modules-load.d/modules.conf
 fi
-if [[ -z $(grep -i cramfs /etc/modules) ]]; then
-	echo "cramfs" >> /etc/modules
+if [[ -z $(grep -i cramfs /etc/modules-load.d/modules.conf) ]]; then
+	echo "cramfs" >> /etc/modules-load.d/modules.conf
 fi
-if [[ -z $(grep -i hfs /etc/modules) ]]; then
-	echo "hfs" >> /etc/modules
+if [[ -z $(grep -i hfs /etc/modules-load.d/modules.conf) ]]; then
+	echo "hfs" >> /etc/modules-load.d/modules.conf
 fi
-if [[ -z $(grep -i hfsplus /etc/modules) ]]; then
-	echo "hfsplus" >> /etc/modules
+if [[ -z $(grep -i hfsplus /etc/modules-load.d/modules.conf) ]]; then
+	echo "hfsplus" >> /etc/modules-load.d/modules.conf
 fi
 if [[ -z $(grep -i "alias rotorar='unrar e -kb -y'" /etc/bash.bashrc) ]]; then
 	echo "alias rotorar='unrar e -kb -y'" >> /etc/bash.bashrc
@@ -91,21 +91,7 @@ fi
 if [[ -z $(grep -i 'INTEL_BATCH="1"' /etc/environment) ]]; then
 	echo 'INTEL_BATCH="1"' >> /etc/environment
 fi
-if [[ -z $(grep -i "#kernel.kptr_restrict = 1" /etc/sysctl.d/10-kernel-hardening.conf) ]]; then
-	sed -i 's/kernel.kptr_restrict = 1/#kernel.kptr_restrict = 1/g' /etc/sysctl.d/10-kernel-hardening.conf
-fi
-if [[ -z $(grep -i "#kernel.sysrq = 176" /etc/sysctl.d/10-magic-sysrq.conf) ]]; then
-	sed -i 's/kernel.sysrq = 176/#kernel.sysrq = 176/g' /etc/sysctl.d/10-magic-sysrq.conf
-fi	
-if [[ -z $(grep -i "#net.ipv4.conf.default.rp_filter=2" /etc/sysctl.d/10-network-security.conf) ]]; then
-	sed -i 's/net.ipv4.conf.default.rp_filter=2/#net.ipv4.conf.default.rp_filter=2/g' /etc/sysctl.d/10-network-security.conf
-fi		
-if [[ -z $(grep -i "#net.ipv4.conf.all.rp_filter=2" /etc/sysctl.d/10-network-security.conf) ]]; then
-	sed -i 's/net.ipv4.conf.all.rp_filter=2/#net.ipv4.conf.all.rp_filter=2/g' /etc/sysctl.d/10-network-security.conf
-fi	
-if [[ -z $(grep -i "#kernel.yama.ptrace_scope = 1" /etc/sysctl.d/10-ptrace.conf) ]]; then
-	sed -i 's/kernel.yama.ptrace_scope = 1/#kernel.yama.ptrace_scope = 1/g' /etc/sysctl.d/10-ptrace.conf
-fi
+
 if [[ -z $(grep -i 'WARNING: unauthorized access to this system is prohibited.' /etc/issue) ]]; then
 	echo 'WARNING: unauthorized access to this system is prohibited.' >> /etc/issue
 fi
@@ -115,9 +101,6 @@ fi
 if [[ -z $(grep -i '#Listen localhost:631' /etc/cups/cupsd.conf) ]]; then
 	sed -i 's/Listen localhost:631/#Listen localhost:631/g' /etc/cups/cupsd.conf
 	chmod 600 /etc/cups/cupsd.conf
-fi
-if [[ -f /etc/init.d/rc ]]; then
-	sed -i 's/umask 022/umask 027/g' /etc/init.d/rc
 fi
 if [[ -f /etc/cups/cups-browsed.conf ]]; then
 	sed -i 's/BrowseRemoteProtocols dnssd cups/BrowseRemoteProtocols none/g' /etc/cups/cups-browsed.conf
@@ -133,21 +116,11 @@ if [[ -f /etc/login.defs ]]; then
 	sed -i 's/PASS_MIN_DAYS\t0/PASS_MIN_DAYS\t1/g' /etc/login.defs
 	sed -i 's/UMASK\t\t022/UMASK\t\t027/g' /etc/login.defs
 fi
-if [[ -f /etc/initramfs-tools/initramfs.conf ]]; then
-	sed -i 's/MODULES=most/MODULES=dep/g' /etc/initramfs-tools/initramfs.conf
-fi	
-if [[ -f /etc/adduser.conf ]]; then
-	sed -i 's_DSHELL=/bin/bash_DSHELL=/usr/bin/fish_g' /etc/adduser.conf
-fi
 if [[ -f /etc/default/keyboard ]]; then
 	sed -i 's/XKBOPTIONS=""/XKBOPTIONS="terminate:ctrl_alt_bksp"/g' /etc/default/keyboard
 fi
 if [[ -f /etc/passwd ]]; then
 	sed -i 's_/bin/bash_/usr/bin/fish_g' /etc/passwd
-fi
-if [[ -f /etc/default/prelink ]]; then
-	sed -i 's/PRELINKING=unknown/PRELINKING=yes/g' /etc/default/prelink
-	sed -i 's/PRELINK_OPTS=-mR/PRELINK_OPTS=-amR/g' /etc/default/prelink
 fi
 if [[ -f /etc/rkhunter.conf ]]; then
 	sed -i 's\UPDATE_MIRRORS=0\UPDATE_MIRRORS=1\g' /etc/rkhunter.conf
@@ -156,26 +129,16 @@ if [[ -f /etc/rkhunter.conf ]]; then
 	sed -i 's\SCRIPTWHITELIST=/usr/bin/egrep\SCRIPTWHITELIST=/bin/egrep\g' /etc/rkhunter.conf
 	sed -i 's\SCRIPTWHITELIST=/usr/bin/fgrep\SCRIPTWHITELIST=/bin/fgrep\g' /etc/rkhunter.conf
 fi
-if [[ -f /etc/default/motd-news ]]; then
-	sed -i 's\ENABLED=1\ENABLED=0\g' /etc/default/motd-news
-fi
 if [[ -f /etc/systemd/system.conf ]]; then
 	sed -i 's\#DefaultTimeoutStopSec=90s\DefaultTimeoutStopSec=10s\g' /etc/systemd/system.conf
 fi
-if [[ $(dpkg --get-selections | grep -w "ssh" | awk '{print $1}' | head -1) = ssh ]]; then
-	mkdir -p $ss
-	chown -R $quien:$quien $ss
-	chmod -R 700 $ss
-fi
+mkdir -p $ss
+chown -R $quien:$quien $ss
+chmod -R 700 $ss
 if ! [[ -d /home/$quien/.config/autostart ]]; then
 	mkdir -p /home/$quien/.config/autostart
 fi
 yes "" | sensors-detect
-echo "password requisite pam_cracklib.so retry=3 minlen=16 difok=3 ucredit=-1 lcredit=-2 dcredit=-2 ocredit=-2" > /etc/pam.d/common-password
-echo "password [success=1 default=ignore] pam_unix.so obscure use_authtok try_first_pass sha512 rounds=65536" >> /etc/pam.d/common-password
-echo "password requisite pam_deny.so" >> /etc/pam.d/common-password
-echo "password required pam_permit.so" >> /etc/pam.d/common-password
-echo "password optional pam_gnome_keyring.so" >> /etc/pam.d/common-password
 echo "#!/bin/sh" > /usr/local/sbin/cgroup_clean
 echo "rmdir /sys/fs/cgroup/cpu/$*" >> /usr/local/sbin/cgroup_clean
 echo "# /etc/security/limits.conf" > /etc/security/limits.conf
@@ -199,13 +162,6 @@ echo "[Journal]" > /etc/systemd/journald.conf
 echo "SystemMaxUse=50M" >> /etc/systemd/journald.conf
 echo "multi on" > /etc/host.conf
 echo "order hosts,bind" >> /etc/host.conf
-echo "SIZE=128M" > /etc/log2ram.conf
-echo "USE_RSYNC=true" >> /etc/log2ram.conf
-echo "MAIL=false" >> /etc/log2ram.conf
-echo 'PATH_DISK="/var/log"' >> /etc/log2ram.conf
-echo "ZL2R=false" >> /etc/log2ram.conf
-echo "COMP_ALG=lz4" >> /etc/log2ram.conf
-echo "LOG_DISK_SIZE=100M" >> /etc/log2ram.conf
 sed -i 's/GRUB_TIMEOUT_STYLE=hidden/GRUB_TIMEOUT_STYLE=menu/g' /etc/default/grub
 sed -i 's/GRUB_TIMEOUT=0/GRUB_TIMEOUT=3/g' /etc/default/grub	
 chmod 444 /usr/libexec/evolution-calendar-factory
