@@ -1,4 +1,16 @@
-commit 36ddeb72f2ff182c85b656e29e192cf49261c733 (HEAD -> master, origin/master, origin/HEAD)
+commit 65ea704a4733d0eebede78488114b6084f53f92a (HEAD -> master, origin/master, origin/HEAD)
+Author: config <Palencia>
+Date:   Sat Oct 3 06:39:44 2020 -0400
+
+    * nueva estructura
+
+commit 4e5ec85470ca505576e302741b427833f6e82622
+Author: config <Palencia>
+Date:   Mon Jul 6 22:05:21 2020 -0400
+
+    * changelog
+
+commit 36ddeb72f2ff182c85b656e29e192cf49261c733
 Author: jose perez <sinfallas@gmail.com>
 Date:   Mon Apr 27 16:53:53 2020 -0400
 
