@@ -1,4 +1,16 @@
-commit 65ea704a4733d0eebede78488114b6084f53f92a (HEAD -> master, origin/master, origin/HEAD)
+commit 1e1f9dfc00493cbce0881e8c53e0945c483655be (HEAD -> master, origin/master, origin/HEAD)
+Author: config <Palencia>
+Date:   Sat Oct 3 10:37:37 2020 -0400
+
+    * primeras dependencias
+
+commit 99fe17f023543520a0164cceb30e0e60becc15b2
+Author: config <Palencia>
+Date:   Sat Oct 3 06:40:15 2020 -0400
+
+    * changelog
+
+commit 65ea704a4733d0eebede78488114b6084f53f92a
 Author: config <Palencia>
 Date:   Sat Oct 3 06:39:44 2020 -0400
 
