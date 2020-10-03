@@ -1,4 +1,16 @@
-commit fd393c9e95eb23df41eb8d11e46757a91f834aa3 (HEAD -> master, origin/master, origin/HEAD)
+commit 99be2170a3b85a7013d6dc2573fa21c1871359a0 (HEAD -> master, origin/master, origin/HEAD)
+Author: config <Palencia>
+Date:   Sat Oct 3 11:11:50 2020 -0400
+
+    * se elimina lo no compatible
+
+commit 798b6ce303185e84602ce9615891b48e20e7eacb
+Author: config <Palencia>
+Date:   Sat Oct 3 10:58:12 2020 -0400
+
+    * changelog
+
+commit fd393c9e95eb23df41eb8d11e46757a91f834aa3
 Author: config <Palencia>
 Date:   Sat Oct 3 10:57:58 2020 -0400
 
