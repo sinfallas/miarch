@@ -1,4 +1,10 @@
-commit 99be2170a3b85a7013d6dc2573fa21c1871359a0 (HEAD -> master, origin/master, origin/HEAD)
+commit eaa206d79a3b8f36bc6009076327dabc51980321 (HEAD -> master, origin/master, origin/HEAD)
+Author: config <Palencia>
+Date:   Sat Oct 3 11:12:07 2020 -0400
+
+    * changelog
+
+commit 99be2170a3b85a7013d6dc2573fa21c1871359a0
 Author: config <Palencia>
 Date:   Sat Oct 3 11:11:50 2020 -0400
 
